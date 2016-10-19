@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/admin/Desktop/Projects/DribbbleApp/build/Debug-iphoneos/Result/Result.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/admin/Desktop/Projects/DribbbleApp/build/Pods.build/Debug-iphoneos/Result.build/unextended-module.modulemap',
+    }]
+  }]
+}

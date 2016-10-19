@@ -7,13 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D2DE8B813106CBB158390F4 /* Pods_DribbbleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791B3DC433A0929CD6E1A524 /* Pods_DribbbleApp.framework */; };
+		8413980E1DA02BA300C13BB3 /* _FollowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413980D1DA02BA200C13BB3 /* _FollowerTableViewCell.swift */; };
+		8432259E1DB1B19800E47FBA /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432259D1DB1B19800E47FBA /* Helper.swift */; };
+		843225A01DB33EF200E47FBA /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432259F1DB33EF200E47FBA /* Follower.swift */; };
+		8432D5291DB087C3000F7CDA /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D5281DB087C2000F7CDA /* CommentsViewController.swift */; };
+		8432D52B1DB08832000F7CDA /* _CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D52A1DB08832000F7CDA /* _CommentTableViewCell.swift */; };
+		8432FF091DA1802000AAB70B /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432FF081DA1802000AAB70B /* Like.swift */; };
+		8433DC281DA2A50F00176478 /* Config+enums+protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433DC271DA2A50F00176478 /* Config+enums+protocols.swift */; };
+		843694241D9EB5D1006197C0 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843694231D9EB5D1006197C0 /* AuthorViewController.swift */; };
+		843D0C321D9142F600D57880 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D0C311D9142F600D57880 /* AuthViewController.swift */; };
+		843D0C341D91435200D57880 /* ShotsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D0C331D91435200D57880 /* ShotsTableViewController.swift */; };
+		843ECDBD1DA0040A001726AC /* _LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843ECDBC1DA0040A001726AC /* _LikeTableViewCell.swift */; };
+		843ECDBF1DA00F12001726AC /* AuthorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843ECDBE1DA00F12001726AC /* AuthorViewModel.swift */; };
+		8441A64A1D920AE600988F77 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441A6491D920AE600988F77 /* AuthViewModel.swift */; };
+		8441A64C1D920E6F00988F77 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441A64B1D920E6F00988F77 /* AuthManager.swift */; };
+		8441A64E1D92AFEB00988F77 /* OAuth2RetryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441A64D1D92AFEB00988F77 /* OAuth2RetryHandler.swift */; };
+		844B42771D97E1CB007EC4FC /* ShotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B42761D97E1CB007EC4FC /* ShotsViewModel.swift */; };
+		844B42791D981B43007EC4FC /* ShotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B42781D981B42007EC4FC /* ShotsTableViewCell.swift */; };
 		848AB07A1D89A23500410823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AB0791D89A23500410823 /* AppDelegate.swift */; };
-		848AB07C1D89A23500410823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AB07B1D89A23500410823 /* ViewController.swift */; };
 		848AB07F1D89A23500410823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848AB07D1D89A23500410823 /* Main.storyboard */; };
 		848AB0811D89A23500410823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848AB0801D89A23500410823 /* Assets.xcassets */; };
 		848AB0841D89A23500410823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848AB0821D89A23500410823 /* LaunchScreen.storyboard */; };
 		848AB08F1D89A23500410823 /* DribbbleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AB08E1D89A23500410823 /* DribbbleAppTests.swift */; };
 		848AB09A1D89A23500410823 /* DribbbleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AB0991D89A23500410823 /* DribbbleAppUITests.swift */; };
+		848AB0AE1D89AF5800410823 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 848AB0AD1D89AF5800410823 /* Podfile */; };
+		84A4F0C91DB0A0EA0061CA8A /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F0C81DB0A0EA0061CA8A /* CommentsViewModel.swift */; };
+		84F3EF851D8C78D70061A0AD /* WebDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3EF841D8C78D70061A0AD /* WebDataManager.swift */; };
+		84F3EF871D8C78FF0061A0AD /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3EF861D8C78FF0061A0AD /* Shot.swift */; };
+		84F3EF891D8D03360061A0AD /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3EF881D8D03360061A0AD /* Author.swift */; };
+		84F3EF8C1D8D06700061A0AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3EF8B1D8D06700061A0AD /* Extensions.swift */; };
+		84F3EF8E1D8D8A700061A0AD /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3EF8D1D8D8A700061A0AD /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +58,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CF49956FDAFEE9DCAADFCAC /* Pods-DribbbleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleApp/Pods-DribbbleApp.release.xcconfig"; sourceTree = "<group>"; };
+		791B3DC433A0929CD6E1A524 /* Pods_DribbbleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DribbbleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8413980D1DA02BA200C13BB3 /* _FollowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _FollowerTableViewCell.swift; sourceTree = "<group>"; };
+		8432259D1DB1B19800E47FBA /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		8432259F1DB33EF200E47FBA /* Follower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		8432D5281DB087C2000F7CDA /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		8432D52A1DB08832000F7CDA /* _CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _CommentTableViewCell.swift; sourceTree = "<group>"; };
+		8432FF081DA1802000AAB70B /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		8433DC271DA2A50F00176478 /* Config+enums+protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+enums+protocols.swift"; sourceTree = "<group>"; };
+		843694231D9EB5D1006197C0 /* AuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
+		843D0C311D9142F600D57880 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		843D0C331D91435200D57880 /* ShotsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsTableViewController.swift; sourceTree = "<group>"; };
+		843ECDBC1DA0040A001726AC /* _LikeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _LikeTableViewCell.swift; sourceTree = "<group>"; };
+		843ECDBE1DA00F12001726AC /* AuthorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorViewModel.swift; sourceTree = "<group>"; };
+		8441A6491D920AE600988F77 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		8441A64B1D920E6F00988F77 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		8441A64D1D92AFEB00988F77 /* OAuth2RetryHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2RetryHandler.swift; sourceTree = "<group>"; };
+		844B42761D97E1CB007EC4FC /* ShotsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsViewModel.swift; sourceTree = "<group>"; };
+		844B42781D981B42007EC4FC /* ShotsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsTableViewCell.swift; sourceTree = "<group>"; };
 		848AB0761D89A23500410823 /* DribbbleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848AB0791D89A23500410823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		848AB07B1D89A23500410823 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		848AB07E1D89A23500410823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		848AB0801D89A23500410823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		848AB0831D89A23500410823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +89,15 @@
 		848AB0951D89A23500410823 /* DribbbleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DribbbleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848AB0991D89A23500410823 /* DribbbleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DribbbleAppUITests.swift; sourceTree = "<group>"; };
 		848AB09B1D89A23500410823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848AB0AD1D89AF5800410823 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		849E17ED1DAECE250094842C /* DribbbleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DribbbleApp.entitlements; sourceTree = "<group>"; };
+		84A4F0C81DB0A0EA0061CA8A /* CommentsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		84F3EF841D8C78D70061A0AD /* WebDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebDataManager.swift; sourceTree = "<group>"; };
+		84F3EF861D8C78FF0061A0AD /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		84F3EF881D8D03360061A0AD /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		84F3EF8B1D8D06700061A0AD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		84F3EF8D1D8D8A700061A0AD /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		D6F959A7D58C99C6BB1FA238 /* Pods-DribbbleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleApp/Pods-DribbbleApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D2DE8B813106CBB158390F4 /* Pods_DribbbleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +133,8 @@
 				848AB08D1D89A23500410823 /* DribbbleAppTests */,
 				848AB0981D89A23500410823 /* DribbbleAppUITests */,
 				848AB0771D89A23500410823 /* Products */,
+				95715C0A9DCC028D6D2C1C80 /* Pods */,
+				9697229113BABCFA4B1F5B11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +151,17 @@
 		848AB0781D89A23500410823 /* DribbbleApp */ = {
 			isa = PBXGroup;
 			children = (
+				849E17ED1DAECE250094842C /* DribbbleApp.entitlements */,
+				84F3EF8A1D8D064F0061A0AD /* Helpers */,
+				848AB0AA1D89A78C00410823 /* Models */,
+				848AB0A91D89A78000410823 /* ViewModels */,
+				848AB0A81D89A75800410823 /* Views */,
 				848AB0791D89A23500410823 /* AppDelegate.swift */,
-				848AB07B1D89A23500410823 /* ViewController.swift */,
 				848AB07D1D89A23500410823 /* Main.storyboard */,
 				848AB0801D89A23500410823 /* Assets.xcassets */,
 				848AB0821D89A23500410823 /* LaunchScreen.storyboard */,
 				848AB0851D89A23500410823 /* Info.plist */,
+				848AB0AD1D89AF5800410823 /* Podfile */,
 			);
 			path = DribbbleApp;
 			sourceTree = "<group>";
@@ -125,6 +184,77 @@
 			path = DribbbleAppUITests;
 			sourceTree = "<group>";
 		};
+		848AB0A81D89A75800410823 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				843D0C311D9142F600D57880 /* AuthViewController.swift */,
+				843D0C331D91435200D57880 /* ShotsTableViewController.swift */,
+				844B42781D981B42007EC4FC /* ShotsTableViewCell.swift */,
+				843694231D9EB5D1006197C0 /* AuthorViewController.swift */,
+				843ECDBC1DA0040A001726AC /* _LikeTableViewCell.swift */,
+				8413980D1DA02BA200C13BB3 /* _FollowerTableViewCell.swift */,
+				8432D5281DB087C2000F7CDA /* CommentsViewController.swift */,
+				8432D52A1DB08832000F7CDA /* _CommentTableViewCell.swift */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		848AB0A91D89A78000410823 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8441A6491D920AE600988F77 /* AuthViewModel.swift */,
+				844B42761D97E1CB007EC4FC /* ShotsViewModel.swift */,
+				843ECDBE1DA00F12001726AC /* AuthorViewModel.swift */,
+				84A4F0C81DB0A0EA0061CA8A /* CommentsViewModel.swift */,
+			);
+			name = ViewModels;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		848AB0AA1D89A78C00410823 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84F3EF841D8C78D70061A0AD /* WebDataManager.swift */,
+				84F3EF861D8C78FF0061A0AD /* Shot.swift */,
+				84F3EF881D8D03360061A0AD /* Author.swift */,
+				84F3EF8D1D8D8A700061A0AD /* Comment.swift */,
+				8441A64B1D920E6F00988F77 /* AuthManager.swift */,
+				8432FF081DA1802000AAB70B /* Like.swift */,
+				8433DC271DA2A50F00176478 /* Config+enums+protocols.swift */,
+				8432259F1DB33EF200E47FBA /* Follower.swift */,
+			);
+			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		84F3EF8A1D8D064F0061A0AD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84F3EF8B1D8D06700061A0AD /* Extensions.swift */,
+				8441A64D1D92AFEB00988F77 /* OAuth2RetryHandler.swift */,
+				8432259D1DB1B19800E47FBA /* Helper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		95715C0A9DCC028D6D2C1C80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6F959A7D58C99C6BB1FA238 /* Pods-DribbbleApp.debug.xcconfig */,
+				5CF49956FDAFEE9DCAADFCAC /* Pods-DribbbleApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9697229113BABCFA4B1F5B11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				791B3DC433A0929CD6E1A524 /* Pods_DribbbleApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +262,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 848AB09E1D89A23500410823 /* Build configuration list for PBXNativeTarget "DribbbleApp" */;
 			buildPhases = (
+				C3A82A4AFAAB1CF00E7CFE2B /* [CP] Check Pods Manifest.lock */,
 				848AB0721D89A23500410823 /* Sources */,
 				848AB0731D89A23500410823 /* Frameworks */,
 				848AB0741D89A23500410823 /* Resources */,
+				E9D7F6C46850D3C32A380740 /* [CP] Embed Pods Frameworks */,
+				DB379AFDA6D1920A840709DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,7 +326,13 @@
 				TargetAttributes = {
 					848AB0751D89A23500410823 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = QZZ8TRWKW3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					848AB0891D89A23500410823 = {
 						CreatedOnToolsVersion = 8.0;
@@ -234,6 +373,7 @@
 			files = (
 				848AB0841D89A23500410823 /* LaunchScreen.storyboard in Resources */,
 				848AB0811D89A23500410823 /* Assets.xcassets in Resources */,
+				848AB0AE1D89AF5800410823 /* Podfile in Resources */,
 				848AB07F1D89A23500410823 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +394,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C3A82A4AFAAB1CF00E7CFE2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB379AFDA6D1920A840709DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DribbbleApp/Pods-DribbbleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9D7F6C46850D3C32A380740 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DribbbleApp/Pods-DribbbleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		848AB0721D89A23500410823 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848AB07C1D89A23500410823 /* ViewController.swift in Sources */,
 				848AB07A1D89A23500410823 /* AppDelegate.swift in Sources */,
+				84F3EF8C1D8D06700061A0AD /* Extensions.swift in Sources */,
+				8432D52B1DB08832000F7CDA /* _CommentTableViewCell.swift in Sources */,
+				84F3EF8E1D8D8A700061A0AD /* Comment.swift in Sources */,
+				8441A64E1D92AFEB00988F77 /* OAuth2RetryHandler.swift in Sources */,
+				8433DC281DA2A50F00176478 /* Config+enums+protocols.swift in Sources */,
+				84A4F0C91DB0A0EA0061CA8A /* CommentsViewModel.swift in Sources */,
+				843D0C321D9142F600D57880 /* AuthViewController.swift in Sources */,
+				843D0C341D91435200D57880 /* ShotsTableViewController.swift in Sources */,
+				8432259E1DB1B19800E47FBA /* Helper.swift in Sources */,
+				84F3EF851D8C78D70061A0AD /* WebDataManager.swift in Sources */,
+				843225A01DB33EF200E47FBA /* Follower.swift in Sources */,
+				843694241D9EB5D1006197C0 /* AuthorViewController.swift in Sources */,
+				8413980E1DA02BA300C13BB3 /* _FollowerTableViewCell.swift in Sources */,
+				844B42791D981B43007EC4FC /* ShotsTableViewCell.swift in Sources */,
+				843ECDBD1DA0040A001726AC /* _LikeTableViewCell.swift in Sources */,
+				84F3EF891D8D03360061A0AD /* Author.swift in Sources */,
+				8432FF091DA1802000AAB70B /* Like.swift in Sources */,
+				844B42771D97E1CB007EC4FC /* ShotsViewModel.swift in Sources */,
+				84F3EF871D8C78FF0061A0AD /* Shot.swift in Sources */,
+				8432D5291DB087C3000F7CDA /* CommentsViewController.swift in Sources */,
+				8441A64A1D920AE600988F77 /* AuthViewModel.swift in Sources */,
+				843ECDBF1DA00F12001726AC /* AuthorViewModel.swift in Sources */,
+				8441A64C1D920E6F00988F77 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +543,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -355,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -383,6 +594,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -399,8 +611,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -410,25 +623,35 @@
 		};
 		848AB09F1D89A23500410823 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6F959A7D58C99C6BB1FA238 /* Pods-DribbbleApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DribbbleApp/DribbbleApp.entitlements;
+				DEVELOPMENT_TEAM = QZZ8TRWKW3;
 				INFOPLIST_FILE = DribbbleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.DribbbleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		848AB0A01D89A23500410823 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CF49956FDAFEE9DCAADFCAC /* Pods-DribbbleApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DribbbleApp/DribbbleApp.entitlements;
+				DEVELOPMENT_TEAM = QZZ8TRWKW3;
 				INFOPLIST_FILE = DribbbleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.DribbbleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -505,6 +728,7 @@
 				848AB0A01D89A23500410823 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		848AB0A11D89A23500410823 /* Build configuration list for PBXNativeTarget "DribbbleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +737,7 @@
 				848AB0A31D89A23500410823 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		848AB0A41D89A23500410823 /* Build configuration list for PBXNativeTarget "DribbbleAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +746,7 @@
 				848AB0A61D89A23500410823 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

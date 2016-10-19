@@ -1,0 +1,76 @@
+PODS:
+  - Alamofire (4.0.0)
+  - AlamofireImage (3.0.0):
+    - Alamofire (~> 4.0)
+  - FontAwesome.swift (0.11.1)
+  - MBProgressHUD (1.0.0)
+  - p2.OAuth2 (3.0.0)
+  - Realm (1.1.0):
+    - Realm/Headers (= 1.1.0)
+  - Realm/Headers (1.1.0)
+  - RealmSwift (1.1.0):
+    - Realm (= 1.1.0)
+  - RxCocoa (3.0.0-beta.1):
+    - RxSwift (~> 3.0.0-beta.1)
+  - RxRealm (0.2.3):
+    - RealmSwift (~> 1.1)
+    - RxSwift (~> 3.0.0-beta.1)
+  - RxSwift (3.0.0-beta.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - AlamofireImage (~> 3.0)
+  - FontAwesome.swift (from `https://github.com/thii/FontAwesome.swift.git`, branch `master`)
+  - MBProgressHUD (~> 1.0.0)
+  - p2.OAuth2 (from `https://github.com/p2/OAuth2`)
+  - RxCocoa (~> 3.0.0-beta.1)
+  - RxRealm (from `https://github.com/RxSwiftCommunity/RxRealm.git`, branch `master`)
+  - RxSwift (~> 3.0.0-beta.1)
+  - SDWebImage (~> 3.8)
+
+EXTERNAL SOURCES:
+  FontAwesome.swift:
+    :branch: master
+    :git: https://github.com/thii/FontAwesome.swift.git
+    :submodules: true
+  p2.OAuth2:
+    :git: https://github.com/p2/OAuth2
+    :submodules: true
+  RxRealm:
+    :branch: master
+    :git: https://github.com/RxSwiftCommunity/RxRealm.git
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  FontAwesome.swift:
+    :commit: b03d71746f277690d1ff7df0c539641c4ba57d4d
+    :git: https://github.com/thii/FontAwesome.swift.git
+    :submodules: true
+  p2.OAuth2:
+    :commit: fb9797900978837b0f19ef91d9ccf2c4df2634bf
+    :git: https://github.com/p2/OAuth2
+    :submodules: true
+  RxRealm:
+    :commit: f88ccfb83582e5af5a16c7106a7a45f8c7cc9711
+    :git: https://github.com/RxSwiftCommunity/RxRealm.git
+    :submodules: true
+
+SPEC CHECKSUMS:
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  AlamofireImage: 6594aa1139a67dcd36cde6da79ea4e5b318e60fb
+  FontAwesome.swift: 9879cd6a1462bf160662d519f7b7474d73bdd1c3
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  p2.OAuth2: a8f96ecad6a46189b9b193691fea401139e43491
+  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
+  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
+  RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
+  RxRealm: 56fb63ead229e0a568f6014f81a0530f74cd8bfa
+  RxSwift: '0823e8d7969c23bfa9ddfb2afa4881e424a1a710'
+  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
+
+PODFILE CHECKSUM: 9726e61223f905ffc694a41b74527c39137cb9d0
+
+COCOAPODS: 1.1.0.rc.2

@@ -7,17 +7,68 @@
 //
 
 import UIKit
+import RealmSwift
+import Realm
+import RxSwift
+import RxCocoa
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    let disposeBag = DisposeBag()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        AuthManager.sharedInstance.setup()
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var initialViewId: String = "AuthViewController"
+        if AuthManager.sharedInstance.isAuthorized() {
+            initialViewId = "MainNavigationController"
+            //initialViewId = "ShotsTableViewController"
+            //initialViewId = "AuthorViewController"
+        }
+
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: initialViewId)
+        self.window?.rootViewController = initialViewController
+        //self.window?.makeKeyAndVisible()
+        
+        AuthManager.sharedInstance.status
+            .asDriver()
+            .asDriver(onErrorJustReturn: .none)
+            .drive(onNext: { [unowned self] status in
+                var initialViewId: String
+                
+                switch status {
+                case .none:
+                    initialViewId = "AuthViewController"
+                case .error(let err):
+                    Helper.showAlert((self.window?.rootViewController)!, err.desc, false, "Auth error")
+                    initialViewId = "AuthViewController"
+                case .user(_):  
+                    initialViewId = "MainNavigationController"
+                }
+                
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: initialViewId)
+                
+                self.window?.rootViewController = initialViewController
+                self.window?.makeKeyAndVisible()
+                })
+        .addDisposableTo(disposeBag)
+        
+         return true
     }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if url.scheme == "dribbbleapp" {
+            AuthManager.sharedInstance.oauth2.handleRedirectURL(url)
+            return true
+        }
+        return false
+    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
