@@ -24,6 +24,8 @@ class ShotsTableViewController: UITableViewController { //, UITableViewDelegate
     @IBOutlet var loadedShots: UIBarButtonItem!
     @IBOutlet var recentShots: UIBarButtonItem!
     
+    let toTopButton = UIButton(type: .custom)
+    
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -49,7 +51,8 @@ class ShotsTableViewController: UITableViewController { //, UITableViewDelegate
                 loadedShotsTrigger: loadedShots.rx.tap.asObservable(),
                 recentShotsTrigger: recentShots.rx.tap.asObservable(),
                 loadNextPartTrigger: loadNextPartTrigger,
-                logoutTrigger: logoutButton.rx.tap.asObservable()
+                logoutTrigger: logoutButton.rx.tap.asObservable(),
+                toTopTrigger: toTopButton.rx.tap.asObservable()
             ),
             shotVC: self
         )
@@ -59,11 +62,12 @@ class ShotsTableViewController: UITableViewController { //, UITableViewDelegate
             .bindTo(tableView.rx.items(cellIdentifier: "ShotCell", cellType: ShotsTableViewCell.self)) { (row, element, cell) in
                 viewModel.setupCell(cell, element)
                 viewModel.setCellTriggers(cell, element)
+                
+                //
+                if row > 2 { self.toTopButton.isHidden = false }
+                else { self.toTopButton.isHidden = true }
             }
             .addDisposableTo(disposeBag)
-
-        //tableView.rx.setDataSource(self).addDisposableTo(disposeBag)
-
     }
 
     // to prevent swipe to delete behavior
@@ -80,16 +84,25 @@ class ShotsTableViewController: UITableViewController { //, UITableViewDelegate
             return visibleHeight
         }
     }
+    
+    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        //visibleRows = tableview.indexPathsForVisibleRows;
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.setToTopButtonPos()
+        }
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.toTopButton.isHidden = true
+        
         if (segue.identifier == "ToAuthor") {
             
             let authorVC = segue.destination as! AuthorViewController
             let authorButton = sender as! UIButton
             let shotCell = authorButton.superview?.superview?.superview as! ShotsTableViewCell
-            
             
             authorVC.username = shotCell.authorUName
         }
@@ -108,6 +121,17 @@ class ShotsTableViewController: UITableViewController { //, UITableViewDelegate
         //        tableView.estimatedRowHeight = 300
         //        tableView.rowHeight = UITableViewAutomaticDimension
         
+        //
+        toTopButton.isHidden = true
+        toTopButton.frame = CGRect(x: self.view.frame.width - 36 - 16, y: self.view.frame.height - 36 - 16, width: 36, height: 36)
+        toTopButton.setBackgroundImage(UIImage(named: "toTopArrow"), for: .normal)
+        toTopButton.alpha = 0.32
+        self.navigationController?.view.addSubview(toTopButton)
+    }
+    
+    func setToTopButtonPos() {
+        toTopButton.frame.origin.x = self.view.frame.width - 36 - 16
+        toTopButton.frame.origin.y = self.view.frame.height - 36 - 16
     }
 
 

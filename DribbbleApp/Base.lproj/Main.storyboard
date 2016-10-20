@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mif-yt-i4a">
@@ -60,16 +60,16 @@
             <objects>
                 <tableViewController storyboardIdentifier="ShotsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5f-H7-sDK" customClass="ShotsTableViewController" customModule="DribbbleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="336" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jd7-0u-8PA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="ShotCell" id="0Kn-JQ-571" customClass="ShotsTableViewCell" customModule="DribbbleApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="414" height="336"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="336"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Kn-JQ-571" id="cHh-Fr-bdK">
-                                    <frame key="frameInset" width="414" height="335.66666666666669"/>
+                                    <frame key="frameInset" width="375" height="335"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyv-HM-shh">
@@ -234,7 +234,7 @@
                         <viewControllerLayoutGuide type="bottom" id="E0W-cP-Xbp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VIt-9C-eG1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPC-fU-Sj3">
@@ -310,10 +310,10 @@
                                                 <color key="sectionIndexBackgroundColor" red="1" green="0.086892697670000005" blue="0.21849713530000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LikeCell" rowHeight="90" id="nCI-OU-LrZ" customClass="LikeTableViewCell" customModule="DribbbleApp">
-                                                        <rect key="frame" x="0.0" y="28" width="386" height="90"/>
+                                                        <rect key="frame" x="0.0" y="28" width="347" height="90"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nCI-OU-LrZ" id="fpO-LR-Dnj">
-                                                            <frame key="frameInset" width="386" height="89.666666666666671"/>
+                                                            <frame key="frameInset" width="347" height="89"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Roh-N8-E3w">
@@ -383,10 +383,10 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FollowerCell" rowHeight="64" id="Qgz-bs-YdQ" customClass="FollowerTableViewCell" customModule="DribbbleApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="386" height="64"/>
+                                                        <rect key="frame" x="0.0" y="28" width="347" height="64"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qgz-bs-YdQ" id="u3D-aE-geW">
-                                                            <frame key="frameInset" width="386" height="63.666666666666664"/>
+                                                            <frame key="frameInset" width="347" height="63"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="5fa-Vu-sOg">
@@ -515,7 +515,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GI7-tW-Nep"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LF3-BW-6vB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnc-Ye-cTA">
@@ -539,10 +539,10 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="141" id="LVF-z2-HPI" customClass="CommentTableViewCell" customModule="DribbbleApp">
-                                        <rect key="frame" x="0.0" y="28" width="402" height="141"/>
+                                        <rect key="frame" x="0.0" y="28" width="363" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LVF-z2-HPI" id="9IA-nL-wnp">
-                                            <frame key="frameInset" width="402" height="140.66666666666666"/>
+                                            <frame key="frameInset" width="363" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="authorName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exf-Uj-9rw">

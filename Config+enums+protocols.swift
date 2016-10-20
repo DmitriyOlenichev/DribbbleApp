@@ -53,20 +53,6 @@ enum AuthStatus {
     case user   //(String)
 }
 
-
-enum WebError: Error {
-    case server //(String)
-    case badResponse //(String)
-    case badCredentials //(String)
-}
-
-enum ButtonState {
-    case normal
-    case selected
-    case disabled
-    case focused    
-}
-
 //
 protocol IdEquatable {
     var id: Int { get set }

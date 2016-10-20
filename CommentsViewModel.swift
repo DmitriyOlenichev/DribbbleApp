@@ -15,15 +15,25 @@ import MBProgressHUD
 class CommentsViewModel {
     var comments = Variable<[Comment]>([])
     
-    let model = WebDataManager.sharedInstance
+    private let model = WebDataManager.sharedInstance
+    private let commentsVC: CommentsViewController
+    private let shotId: UInt
+    
+    private var isAllCommentsLoaded: Bool = false
+    
     
     var nextPart: UInt = 1
-    let perPart: UInt = 100
+    let perPart: UInt = 15
 
     
     private let disposeBag = DisposeBag()
     
     init(addCommentTrigger: Observable<Void>, commentBody: Observable<String>, loadNextPartTrigger: Observable<Void>, shotId: UInt,  commentsVC: CommentsViewController) {
+        
+        self.commentsVC = commentsVC
+        self.shotId = shotId
+        
+        //self.isAllCommentsLoaded = false
         
         //validation
         commentBody
@@ -44,6 +54,7 @@ class CommentsViewModel {
                     // чтобы добавлять комментарии нужно быть в команде дизайнеров или игроком
                     if error == nil {
                         self.comments.value.insert(comment!.value, at: 0)
+                        self.reset()
                        //
                     } else {
                         if case  WebErr.forbidden = error! {
@@ -55,15 +66,8 @@ class CommentsViewModel {
                     //fake comment add test!
 //                    let comment = self.addfakeComment()
 //                    self.comments.value.insert(comment, at: 0)
+//                    self.reset()
 
-                    
-                    //
-                    commentsVC.commentTextView.text = ""
-                    commentsVC.addCommentButton.isEnabled = false
-  
-                    if commentsVC.commentsTableView.numberOfRows(inSection: 0) > 0 {
-                        commentsVC.commentsTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: true)
-                    }
                 })
             }
             .subscribe {
@@ -72,17 +76,60 @@ class CommentsViewModel {
             .addDisposableTo(disposeBag)
         
         //
-        model.fetchShotComments(shotId: shotId, page: nextPart, perPage: perPart) { error, comments in
+        loadNextPartTrigger
+            .throttle(0.25, latest: false, scheduler: MainScheduler.instance)
+            .filter { _ -> Bool in
+                return self.comments.value.count > 1 && !self.isAllCommentsLoaded
+            }
+            .bindNext {
+                self.appendNextPart() { error, isFinish in
+                    if error != nil {
+                        Helper.showAlert(commentsVC, error!.desc, false, "Error while load more")
+                    }
+                }
+                
+            }
+            .addDisposableTo(self.disposeBag)
+
+
+        //
+        self.appendNextPart(part: nextPart) { error, isFinish in
+            if (error != nil) { Helper.showAlert(commentsVC, error!.desc, true, "Error") }
+        }
+       
+    }
+    
+    
+    func appendNextPart(part: UInt = 1, completion: @escaping (WebErr?, Bool) -> Void) {
+        model.fetchShotComments(shotId: shotId, page: self.nextPart, perPage: self.perPart) { error, comments in
+            
             if error == nil {
-                self.comments.value.append(contentsOf: comments!.value)
-                self.comments.value.sort(by: { $0.updatedAt > $1.updatedAt })
+                let newComments = comments!.value.unique(of: self.comments.value)
+                
+                let isFinish = newComments.count > 0 ? false : true
+                self.isAllCommentsLoaded = isFinish
+                
+                self.comments.value.append(contentsOf: newComments)
+                //self.comments.value.sort(by: { $0.updatedAt > $1.updatedAt })
+                
+                self.nextPart += 1
+                
+                completion(nil, isFinish)
             } else {
                 print(error)
+                completion(error, false)
             }
         }
     }
     
-    
+    private func reset() {
+        commentsVC.commentTextView.text = ""
+        commentsVC.addCommentButton.isEnabled = false
+        
+        if commentsVC.commentsTableView.numberOfRows(inSection: 0) > 0 {
+            commentsVC.commentsTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: true)
+        }
+    }
     //test
     private func addfakeComment() -> Comment {
         let data: [String : Any] = [

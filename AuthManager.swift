@@ -31,7 +31,7 @@ class AuthManager {
         "scope": Config.scope,  //"user repo:status"  public+write+comment+upload
         ] as OAuth2JSON)
     
-    func setup() {
+    func setup() {  //_ webVC: UIViewController
         if isAuthorized() {
             status.value = .user
         }
@@ -41,17 +41,15 @@ class AuthManager {
         sessionManager.adapter = retrier
         sessionManager.retrier = retrier
         self.sessionManager = sessionManager   // you must hold on to this somewhere
+        
+
     }
     
     func logout() {
-        debugPrint("**token before logout: " + oauth2.accessToken!)
         oauth2.forgetTokens()
         oauth2.abortAuthorization()
         
-        //let storage = HTTPCookieStorage.shared
-        //storage.cookies?.forEach() { storage.deleteCookie($0) }
-        
-        status.value = .none
+        status.value = .none  
     }
     
     func isAuthorized() -> Bool{
@@ -62,9 +60,8 @@ class AuthManager {
     
     
     func login() {
-        
         sessionManager.request(Config.Urls.user).validate().responseJSON { response in
-            debugPrint(response)
+            //debugPrint(response)
             if let data = response.result.value as? [String: Any] {
                 debugPrint(data)
                 //status = .user((data["user"] as! String?) ?? "*unnown*")  //data["user"]

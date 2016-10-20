@@ -48,7 +48,6 @@ class CommentsViewController: UIViewController, UITableViewDelegate {
             
         )
         
-        debugPrint("***count: " + viewModel.comments.value.count.description)
         viewModel.comments
             .asObservable()
             .bindTo(commentsTableView.rx.items(cellIdentifier: "CommentCell", cellType: CommentTableViewCell.self)) { (row, element, cell) in

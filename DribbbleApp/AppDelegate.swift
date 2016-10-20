@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let disposeBag = DisposeBag()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         AuthManager.sharedInstance.setup()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -42,12 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 var initialViewId: String
                 
                 switch status {
-                case .none:
+                case .none: debugPrint("*.none")
                     initialViewId = "AuthViewController"
-                case .error(let err):
+                case .error(let err): debugPrint("*.error")
                     Helper.showAlert((self.window?.rootViewController)!, err.desc, false, "Auth error")
                     initialViewId = "AuthViewController"
-                case .user(_):  
+                case .user(_):  debugPrint("*.user")
                     initialViewId = "MainNavigationController"
                 }
                 

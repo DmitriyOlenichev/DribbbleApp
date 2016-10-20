@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Comment {
+struct Comment : Equatable {
     let id: UInt!
     let body: String!
     let updatedAt: Date!
@@ -30,5 +30,9 @@ struct Comment {
             debugPrint("*nilLike")
             return nil
         }
+    }
+    
+    static func ==(a: Comment, b: Comment) -> Bool {
+        return a.id == b.id//&&
     }
 }

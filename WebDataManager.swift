@@ -208,7 +208,11 @@ class WebDataManager {
     func fetchShotComments(shotId: UInt, page: UInt = 1, perPage: UInt = 100, completion: @escaping (_ error: WebErr?, _ comment: Variable<[Comment]>?) -> Void) {
         let url = Config.Urls.shots + "/" + shotId.description + "/comments"
         
-        Alamofire.request(url, parameters: self.parameters).validate().responseJSON { response in
+        var parameters = self.parameters
+        parameters["page"] = page as UInt?
+        parameters["per_page"] = perPage as UInt?
+        
+        Alamofire.request(url, parameters: parameters).validate().responseJSON { response in
             guard response.result.isSuccess else {
                 completion(.server(response.result.error!.localizedDescription), nil)
                 return

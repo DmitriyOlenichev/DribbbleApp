@@ -35,7 +35,8 @@ class ShotsViewModel {
             loadedShotsTrigger: Observable<Void>,
             recentShotsTrigger: Observable<Void>,
             loadNextPartTrigger: Observable<Void>,
-            logoutTrigger: Observable<Void>
+            logoutTrigger: Observable<Void>,
+            toTopTrigger: Observable<Void>
         ),
          shotVC: ShotsTableViewController
         )
@@ -49,6 +50,15 @@ class ShotsViewModel {
         } else {
             self.showRecentTab()
         }
+        
+        //scroll to top
+        uiTriggers.toTopTrigger
+            .bindNext { _ in
+                if shotVC.tableView.numberOfRows(inSection: 0) > 0 {
+                    shotVC.tableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: true)
+                }
+        }
+        .addDisposableTo(disposeBag)
 
         //refresh data
         self.refreshControl?.rx
@@ -57,7 +67,7 @@ class ShotsViewModel {
             .filter { _ -> Bool in
                 return self.isRecentTab
             }
-            .bindNext { _ in    //[weak this] in
+            .bindNext { _ in
                 self.reloadData() { isSuccess, err in
                     self.refreshControl?.endRefreshing()
                     if err != nil {
@@ -73,8 +83,6 @@ class ShotsViewModel {
             }
             .throttle(0.25, latest: false, scheduler: MainScheduler.instance)
             .bindNext {
-                debugPrint("*more shots load")
-                
                 self.appendNextPart() { isSuccess, err in
                     if err != nil {
                         Helper.showAlert(self.shotVC, err!.desc, false)
@@ -133,7 +141,7 @@ class ShotsViewModel {
 
     }
 
-    func getFromCache() { debugPrint("*get from cache")
+    func getFromCache() {
         self.shots.value = realm.objects(Shot.self).sorted(byProperty: "likesCount", ascending: false).toArray() //.sorted(byProperty: "id", ascending: false)
     }
     
@@ -173,7 +181,7 @@ class ShotsViewModel {
     }
     
     
-    //configure!
+    //
     func setupCell(_ cell: ShotsTableViewCell,_ element: Shot) {
         
         //for segue pass
@@ -205,7 +213,6 @@ class ShotsViewModel {
         //
         cell.likeButton.rx.tap
             .subscribe(onNext: {
-                debugPrint("*like button tap")
                 
                 self.model.isShotLiked(shotId: UInt(element.id), completion: { error, isLiked in
                     if !isLiked {
@@ -219,7 +226,6 @@ class ShotsViewModel {
                     else {
                         self.model.unlikeShot(shotId: UInt(element.id), completion: { error in
                             if error == nil {
-                                debugPrint("**unlikeShot success!")
                                 cell.likeButton.isSelected = false
                                 cell.likeCountText.text = (UInt(cell.likeCountText.text!)! - 1).description
                             } else { print(error) }
